@@ -8,11 +8,13 @@ def verificar_nota():
         nota = float(nota_texto)
 
         if nota == 10:
-            resultado = "Parabens nota máxima!"
+            resultado = "Parabéns nota máxima!"
         elif nota >= 9 and nota <= 9.9:
             resultado = "Quase perfeito!"
         elif nota >= 0 and nota <= 4.9:
             resultado = "Reprovado com baixa nota."
+        else:
+            resultado = "Aprovado!"
 
         messagebox.showinfo("Resultado", f"Situação: {resultado}")
     else:
@@ -27,7 +29,7 @@ tk.Label(root, text= "Digite a nota do aluno:", bg= "#FF00AA", fg= "black", font
 entry_nota = tk.Entry(root)
 entry_nota.pack(pady=5)
 
-tk.Button(root, text="Verificar", command=verificar_nota, bg="blue", font=("Arial", 11, "bold")).pack(pady=15)
+tk.Button(root, text="Verificar", command=verificar_nota, bg="blue", fg= "white", font=("Arial", 11, "bold")).pack(pady=15)
 
 root.mainloop()            
 
